@@ -8,7 +8,6 @@ https://hollowfiregames.github.io
 | Inicio | `/` |
 | Truco: privacidad (castellano) | `/truco/privacidad.html` |
 | Truco: privacy (English) | `/truco/privacy.html` |
-| Chefi: privacidad | `/chefi/privacidad.html` |
 
 HTML y CSS estáticos, sin JavaScript (las animaciones, como la llama de la portada, son de CSS), sin fuentes ni recursos externos, sin
 cookies ni rastreadores. Cada página tiene una Content-Security-Policy que solo
