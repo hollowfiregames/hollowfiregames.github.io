@@ -80,14 +80,14 @@ a:hover { color: var(--gold-light); }
 .brand svg { width: 28px; height: 28px; flex: none; }
 /* La llama del logo, chiquita, titilando como en la portada. */
 .brand-flame {
-  --k: .56; flex: none; width: calc(32px * var(--k)); height: calc(50px * var(--k));
+  --k: .56; flex: none; width: calc(34px * var(--k)); height: calc(55px * var(--k));
   background: url("flame_loop.png") no-repeat;
   background-size: calc(2592px * var(--k)) calc(92px * var(--k));
-  background-position: calc(-38px * var(--k)) calc(-28px * var(--k));
+  background-position: calc(-37px * var(--k)) calc(-29px * var(--k));
   image-rendering: pixelated;
   animation: brand-flicker 2s steps(24) infinite;
 }
-@keyframes brand-flicker { to { background-position: calc((-38px - 2592px) * var(--k)) calc(-28px * var(--k)); } }
+@keyframes brand-flicker { to { background-position: calc((-37px - 2592px) * var(--k)) calc(-29px * var(--k)); } }
 .site-nav { display: flex; gap: 4px; flex-wrap: wrap; }
 .site-nav a {
   color: var(--ink-soft); text-decoration: none; font-family: var(--pixel); font-size: .85rem;
