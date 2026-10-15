@@ -271,6 +271,32 @@ h2 { font-size: 1.3rem; margin: 0 0 10px; color: var(--ink); }
 }
 .site-footer a { color: var(--ink-soft); }
 
+/* ── Compu: la portada de costado y Truco a lo ancho ──── */
+
+.home { max-width: 1040px; }
+@media (min-width: 860px) {
+  .hero {
+    flex-direction: row; justify-content: center; align-items: center; gap: 0; text-align: left;
+    min-height: 0; padding: 64px 0 72px;
+  }
+  .hero::before { left: 36%; top: 50%; }
+  /* La imagen de la llama tiene margen para las chispas: se acerca al nombre. */
+  .flame { --s: 3; flex: none; margin: calc(-14px * var(--s)) calc(-26px * var(--s)) calc(-6px * var(--s)) 0; }
+  .hero-text { display: flex; flex-direction: column; align-items: flex-start; }
+  .wordmark img { margin: 0; }
+  .wordmark .title { width: calc(43px * 7); height: calc(7px * 7); }
+  .wordmark .studio { margin-top: 16px; }
+  .hero .lead { margin: 22px 0 0; }
+  /* Truco: la imagen entera arriba y el texto en dos columnas. */
+  .game.featured .body {
+    display: grid; grid-template-columns: 1.2fr 1fr; gap: 10px 36px; align-items: start; padding: 24px 28px 26px;
+  }
+  .game.featured .badge, .game.featured .links { grid-column: 1 / -1; justify-self: start; }
+  .game.featured .about { display: flex; flex-direction: column; gap: 10px; }
+  .features { grid-template-columns: 1fr; margin-top: 2px; }
+  .contact { margin-top: 28px; }
+}
+
 /* ── Celular ───────────────────────────────────────────── */
 
 @media (max-width: 520px) {
@@ -280,14 +306,14 @@ h2 { font-size: 1.3rem; margin: 0 0 10px; color: var(--ink); }
   .brand svg { width: 24px; height: 24px; }
   .site-nav { flex-wrap: nowrap; gap: 0; }
   .site-nav a { font-size: .75rem; padding: 6px 7px; letter-spacing: .03em; }
-  main { padding: 0 14px 40px; }
-  .hero { min-height: 0; padding: 30px 0 34px; }
+  main { padding: 0 10px 40px; }
+  .hero { min-height: 0; padding: 18px 0 26px; }
   .hero .lead { margin-top: 20px; }
   .hero .scroll { display: none; }
-  .flame { --s: 3; }
-  .wordmark .title { width: calc(43px * 6); height: calc(7px * 6); }
-  .wordmark .studio { width: calc(40px * 2); height: calc(7px * 2); margin-top: 14px; }
-  .hero::before { width: 420px; height: 420px; }
+  .flame { --s: 2; }
+  .wordmark .title { width: calc(43px * 5); height: calc(7px * 5); }
+  .wordmark .studio { width: calc(40px * 2); height: calc(7px * 2); margin-top: 12px; }
+  .hero::before { width: 360px; height: 360px; }
   .section, .contact { padding: 18px; }
   .section-title { margin: 0 0 14px; }
   .game.featured .body { padding: 16px 16px 18px; }
